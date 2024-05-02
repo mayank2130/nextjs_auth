@@ -1,5 +1,5 @@
 import axios from "axios";
-import client from "@/db"
+import client from "@/db";
 
 async function fetchData() {
   const user = await client.user.findFirst({});
@@ -19,7 +19,7 @@ export default async function Home() {
         <div className="border p-8 rounded">
           <div>Name: {userData?.name}</div>
 
-          {userData?.email}
+          Email: {userData?.email}
         </div>
       </div>
     </div>
